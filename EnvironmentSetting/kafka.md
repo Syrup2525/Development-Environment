@@ -20,9 +20,14 @@
     wget https://downloads.apache.org/kafka/3.4.0/kafka_2.13-3.4.0.tgz
     ```
 
+* 1-3 압축 해제
+    ```
+    tar xvf kafka_2.13-3.4.0.tgz
+    ```
+
 * 1-3 심볼릭 링크 생성
     ```
-    ln -s kafka_2.13-3.4.0.tgz kafka
+    ln -s kafka_2.13-3.4.0 kafka
     ```
 
 # 2. kafka config 파일 수정
