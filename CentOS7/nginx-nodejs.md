@@ -142,3 +142,24 @@
         }
     }
     ```
+
+* 6-2 IP 직접접근 차단 (필요한 경우)
+
+    ```
+    vi /etc/nginx/nginx.conf
+    ```
+    ```
+    ...
+    server {
+        listen       80 default_server;
+	    return 	     444;
+        ...
+    }
+    ...
+    ```
+
+* 6-3 변경사항 적용
+
+    ```
+    systemctl restart nginx
+    ```
