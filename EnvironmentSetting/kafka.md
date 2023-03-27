@@ -52,18 +52,18 @@
     ```
 
 # 4. 테스트
-* 4.1 zookeeper 실행
+* 4-1 zookeeper 실행
     ```
     kafka/bin/zookeeper-server-start.sh kafka/config/zookeeper.properties
     ```
 
-* 4.2 kafka (별도 터미널에서) 실행
+* 4-2 kafka (별도 터미널에서) 실행
     ```
     kafka/bin/kafka-server-start.sh kafka/config/server.properties
     ```
 
 # 5. 서비스 등록
-* 5.1 zookeeper 스크립트 작성
+* 5-1 zookeeper 스크립트 작성
     ```
     vi /usr/lib/systemd/system/zookeeper.service
     ```
@@ -87,7 +87,18 @@
     WantedBy=multi-user.target
     ```
 
-* 5.2 kafka 스크립트 작성
+* 5-2 zookeeper 서비스 등록 및 시작
+    ```
+    systemctl start zookeeper
+    ```
+    ```
+    systemctl status zookeeper
+    ```
+    ```
+    systemctl enable zookeeper
+    ```
+
+* 5.3 kafka 스크립트 작성
     ```
     vi /usr/lib/systemd/system/kafka.service
     ```
@@ -109,4 +120,15 @@
 
     [Install]
     WantedBy=multi-user.target
+    ```
+
+* 5-4 kafka 서비스 등록 및 시작
+    ```
+    systemctl start kafka
+    ```
+    ```
+    systemctl status kafka
+    ```
+    ```
+    systemctl enable kafka
     ```
