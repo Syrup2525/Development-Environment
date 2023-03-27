@@ -46,7 +46,67 @@
     vi kafka/config/server.properties
     ```
     ```
+    broker.id=1
     listeners=PLAINTEXT://<IP>:9092
     advertised.listeners=PLAINTEXT://<IP>:9092
     ```
 
+# 4. 테스트
+* 4.1 zookeeper 실행
+    ```
+    kafka/bin/zookeeper-server-start.sh kafka/config/zookeeper.properties
+    ```
+
+* 4.2 kafka (별도 터미널에서) 실행
+    ```
+    kafka/bin/kafka-server-start.sh kafka/config/server.properties
+    ```
+
+# 5. 서비스 등록
+* 5.1 zookeeper 스크립트 작성
+    ```
+    vi /usr/lib/systemd/system/zookeeper.service
+    ```
+    ```
+    [Unit]
+    Description=zookeeper
+    After=network.target
+
+    [Service]
+    Type=forking
+    User=user
+    Group=user
+    SyslogIdentifier=zookeeper
+    WorkingDirectory=/home/user/kafka
+    Restart=always
+    RestartSec=0s
+    ExecStart=/home/user/kafka/bin/zookeeper-server-start.sh kafka/config/zookeeper.properties
+    ExecStop=/home/user/kafka/bin/zookeeper-server-stop.sh
+
+    [Install]
+    WantedBy=multi-user.target
+    ```
+
+* 5.2 kafka 스크립트 작성
+    ```
+    vi /usr/lib/systemd/system/kafka.service
+    ```
+    ```
+    [Unit]
+    Description=kafka
+    After=network.target
+
+    [Service]
+    Type=simple
+    User=user
+    Group=user
+    SyslogIdentifier=kafka
+    WorkingDirectory=/home/user/kafka
+    Restart=always
+    RestartSec=0s
+    ExecStart=/home/user/kafka/bin/kafka-server-start.sh /home/user/kafka/config/server.properties
+    ExecStop=/home/user/kafka/bin/kafka-server-stop.sh
+
+    [Install]
+    WantedBy=multi-user.target
+    ```
