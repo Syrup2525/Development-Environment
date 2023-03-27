@@ -1,17 +1,15 @@
-1. JAVA 설치 (필요한 경우)
+# 1. JAVA 설치 (필요한 경우)
 
 ```
 yum install java-1.8.0-openjdk
 ```
 
-
-1-1. JAVA 설치 확인
+# 1-1. JAVA 설치 확인
 ```
 java -version
 ```
 
-
-2. wget 설치 (필요한 경우)
+# 2. wget 설치 (필요한 경우)
 ```
 yum install wget
 ```
