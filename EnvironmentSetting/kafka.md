@@ -4,7 +4,7 @@
 yum install java-1.8.0-openjdk
 ```
 
-# 1-1. JAVA 설치 확인
+## 1-1. JAVA 설치 확인
 ```
 java -version
 ```
