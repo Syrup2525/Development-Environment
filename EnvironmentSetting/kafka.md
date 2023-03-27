@@ -80,7 +80,7 @@
     WorkingDirectory=/home/user/kafka
     Restart=always
     RestartSec=0s
-    ExecStart=/home/user/kafka/bin/zookeeper-server-start.sh kafka/config/zookeeper.properties
+    ExecStart=/home/user/kafka/bin/zookeeper-server-start.sh /home/user/kafka/config/zookeeper.properties
     ExecStop=/home/user/kafka/bin/zookeeper-server-stop.sh
 
     [Install]
