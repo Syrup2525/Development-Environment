@@ -1,4 +1,5 @@
 # 1. nginx 설치
+
 * 1-1 nginx 설치 및 서비스 등록
 
     ```
@@ -15,6 +16,7 @@
     ```
 
 # 2. node 및 npm 설치
+
 * 2-1 node 설치
 
     ```
@@ -34,6 +36,7 @@
     ```
 
 # 3. npm global module 설치 (sudo 권한 필요)
+
 * 3-1 pm2 설치 (node 프로세스 매니저)
 
     ```
@@ -47,6 +50,7 @@
     ```
 
 # 4. node 특정 버전 설치 (sudo 권한 필요)
+
 * 4-1 node 원하는 버전 설치
 
     * 특정 버전 설치
@@ -54,11 +58,13 @@
         ```
         n 16.19.1
         ```
+
     * lts 설치 
 
         ```
         n lts
         ```
+
     * latest 설치
 
         ```
@@ -72,6 +78,7 @@
     ```
 
 # 5. node example 파일 작성
+
 * 5-1 폴더 생성
 
     ```
@@ -163,3 +170,35 @@
     ```
     systemctl restart nginx
     ```
+
+# 7. SELinex 설정변경
+    
+* 7-1 semanage 명령어 사용을 위한 패키지 설치 (필요한 경우)
+
+    ```
+    yum install policycoreutils-python
+    ```
+
+* 7-2 현재 허용되어있는 포트 확인
+
+    ```
+    semanage port --list
+    ```
+
+    * http_port_t 항목 확인
+
+        ```
+        http_port_t    tcp    80, 81, 443, 488, 8008, 8009, 8443, 9000
+        ```
+
+* 7-3 3000 번 포트 허용
+
+    ```
+    semanage port --add --type http_port_t --proto tcp 3000
+    ```
+
+# 8. 브라우저에서 접속 확인
+
+```
+http://test.example.com
+```
