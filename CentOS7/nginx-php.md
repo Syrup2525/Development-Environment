@@ -36,6 +36,7 @@
     ```
     vi /etc/opt/remi/php74/php-fpm.d/www.conf
     ```
+
     ```
     user = nginx 
     group = nginx
@@ -50,23 +51,29 @@
     ```
     vi /etc/opt/remi/php74/php.ini
     ```
+
     ```
     short_open_tag=On
     ```
 
 * 3-3 서비스 시작 및 등록
+
     ```
     systemctl start php74-php-fpm
     ```
+
     ```
     systemctl enable php74-php-fpm
     ```
 
 # 4. nginx 설정
 
+* 4-1 nginx 설정 파일 수정
+
     ```
     vi /etc/nginx/conf.d/php.conf
     ```
+
     ```
     server {
         listen       80;
@@ -86,6 +93,12 @@
             include        fastcgi_params;
         }
     }
+    ```
+
+* 4-2 설정파일 적용 (nginx 재시작)
+
+    ```
+    systemctl restart nginx
     ```
 
 # 5. 추가 설정 (필요시)
