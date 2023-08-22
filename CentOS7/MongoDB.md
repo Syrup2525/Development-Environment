@@ -56,7 +56,7 @@
         {
             user: "admin",      # 원하는 사용자 이름으로 변경
             pwd: "password",    # 원하는 비밀번호로 변경
-            roles: [ { role: "userAdminAnyDatabase", db: "admin" }, "readWriteAnyDatabase" ]
+            roles: [ { role: "root", db: "admin" }, "readWriteAnyDatabase" ]
         }
     )
     ```
