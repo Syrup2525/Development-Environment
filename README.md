@@ -4,6 +4,7 @@
 * [php 설치후 nginx 연동](https://github.com/Syrup2525/Development-Environment/blob/main/CentOS7/nginx-php.md)
 * [kafka 설치](https://github.com/Syrup2525/Development-Environment/blob/main/CentOS7/kafka.md)
 * [MongoDB 설치](https://github.com/Syrup2525/Development-Environment/blob/main/CentOS7/MongoDB.md)
+* [mysql 8 설치](https://github.com/Syrup2525/Development-Environment/blob/main/CentOS7/mysql.md)
 
 # macOS
 * [homebrew 명령어](https://github.com/Syrup2525/Development-Environment/blob/main/macOS/brew.md)
