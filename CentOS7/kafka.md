@@ -17,7 +17,7 @@
 
 * 2-2 kafka 다운
     ```
-    wget https://downloads.apache.org/kafka/3.4.0/kafka_2.13-3.4.0.tgz
+    wget https://downloads.apache.org/kafka/3.5.1/kafka_2.13-3.5.1.tgz
     ```
 
 * 2-3 압축 해제
