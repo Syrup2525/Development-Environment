@@ -22,12 +22,12 @@
 
 * 2-3 압축 해제
     ```
-    tar xvf kafka_2.13-3.4.0.tgz
+    tar xvf kafka_2.13-3.5.1.tgz
     ```
 
 * 2-4 심볼릭 링크 생성
     ```
-    ln -s kafka_2.13-3.4.0 kafka
+    ln -s kafka_2.13-3.5.1 kafka
     ```
 
 # 3. kafka config 파일 수정
