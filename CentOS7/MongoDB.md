@@ -73,3 +73,15 @@
     ```
     systemctl restart mongod
     ```
+
+# 3. 추가 설정 사항 (옵션)
+* 3-1 다른 경로에 데이터를 저장하는 경우 or 데이터 폴더를 지우고 새로 만든 경우
+```
+chown -R mongod:mongod /var/lib/mongo
+```
+```
+chmod -R 775 /var/lib/mongo
+```
+```
+chcon -Rv --type=mongod_var_lib_t /var/lib/mongo
+```
