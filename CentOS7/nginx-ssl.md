@@ -81,6 +81,30 @@
             proxy_pass http://127.0.0.1:3000;
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         }
+
+        # /socket (node listen 3001 webSocket)
+        location /socket {
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header Host $host;
+
+            proxy_pass http://127.0.0.1:3001;
+
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            roxy_set_header Connection "upgrade";
+        }
+
+        # /example/php
+        location ^~ /example/php {
+            alias /home/user/php/example/;
+            index index.html index.htm index.php;
+
+            location ~ \.php$ {
+                fastcgi_pass   127.0.0.1:9000;
+                include        fastcgi_params;
+                fastcgi_param  SCRIPT_FILENAME $request_filename;
+            }
+        }
     }
     ```
 
