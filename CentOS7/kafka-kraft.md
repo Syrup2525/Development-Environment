@@ -52,7 +52,7 @@
     kafka/bin/kafka-storage.sh format -t jaShGO9YR12vntLHlWQQBA -c kafka/config/kraft/server.properties
     ```
     ```
-    vi kafka/kraft/config/server.properties
+    vi kafka/config/kraft/server.properties
     ```
     ```
     broker.id=1
