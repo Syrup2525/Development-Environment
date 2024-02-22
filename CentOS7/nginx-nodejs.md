@@ -182,7 +182,7 @@
 * 7-2 현재 허용되어있는 포트 확인
 
     ```
-    semanage port --list
+    semanage port --list | grep http_port_t
     ```
 
     * http_port_t 항목 확인
