@@ -18,7 +18,7 @@ kafka/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic <topic_
 ### 컨슈머 그룹 현재 상태 조회
 
 ```
-bin/kafka-consumer-groups.sh —bootstrap-server localhost:9092 —group <consumer_group_id> —describe 
+bin/kafka-consumer-groups.sh -—bootstrap-server localhost:9092 -—group <consumer_group_id> -—describe 
 ```
 * `GROUP` consumer 그룹의 ID
 * `TOPIC` 해당 consumer 그룹이 구독중인 토픽의 이름 
