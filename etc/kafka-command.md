@@ -6,6 +6,14 @@ bin/kafka-topics.sh --list --bootstrap-server localhost:9092
 
 <br>
 
+# kafka-console-consumer
+### 메시지 소비 (consume)
+```
+bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic <topic_name>
+```
+
+<br>
+
 # kafka-console-producer
 ### 메시지 생성 (producer)
 ```
