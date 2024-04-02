@@ -17,3 +17,6 @@
 
 # Xcode & Swift
 * [Pod 재설치](https://github.com/Syrup2525/Development-Environment/blob/main/XcodeAndSwift/pod-reinstall.md)
+
+# Etc
+* [Kafka Console 자주 사용하는 명령어](https://github.com/Syrup2525/Development-Environment/blob/main/etc/kafka-command.md)
