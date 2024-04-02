@@ -1,7 +1,7 @@
 # kafka-topics
 ### 토픽 목록 조회
 ```
-kafka/bin/kafka-topics.sh --list --bootstrap-server localhost:9092
+bin/kafka-topics.sh --list --bootstrap-server localhost:9092
 ```
 
 <br>
@@ -9,7 +9,7 @@ kafka/bin/kafka-topics.sh --list --bootstrap-server localhost:9092
 # kafka-console-producer
 ### 메시지 생성 (producer)
 ```
-kafka/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic <topic_name>
+bin/kafka-console-producer.sh --broker-list localhost:9092 --topic <topic_name>
 ```
 
 <br>
