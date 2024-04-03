@@ -4,6 +4,16 @@
 bin/kafka-topics.sh --list --bootstrap-server localhost:9092
 ```
 
+### 토픽 생성
+```
+bin/kafka-topics.sh --bootstrap-server localhost:9092 --create --topic <topic_name> --partitions <number_of_partitions> --replication-factor <number_of_replication-factor>
+```
+
+### 토픽 삭제
+```
+bin/kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic <topic_name>
+```
+
 <br>
 
 # kafka-console-consumer
