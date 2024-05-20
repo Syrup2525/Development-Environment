@@ -124,4 +124,4 @@
 
 * 3-2 SSL 확인
     
-    [여기](https://www.sslshopper.com/ssl-checker.html)에 접속해서 본인 도메인을 넣고 적용이 잘 되었는지 확인 (모든 항목이 성공 표시가 되어야함)
+    [여기](https://www.sslshopper.com/ssl-checker.html) 또는 [여기](https://decoder.link/sslchecker/) 에 접속해서 본인 도메인을 넣고 적용이 잘 되었는지 확인 (모든 항목이 성공 표시가 되어야함)
