@@ -8,12 +8,11 @@
 * [kafka 설치 (KRaft 사용)](https://github.com/Syrup2525/Development-Environment/blob/main/CentOS7/kafka-kraft.md)
 * [MongoDB 설치](https://github.com/Syrup2525/Development-Environment/blob/main/CentOS7/MongoDB.md)
 * [mysql 8 설치](https://github.com/Syrup2525/Development-Environment/blob/main/CentOS7/mysql.md)
-
+* [kubernetes, helm, rancher 통합 설치 (RKE2 이용)](https://github.com/Syrup2525/Development-Environment/blob/main/CentOS7/kubernetes.md)
 
 # macOS
 * [homebrew 명령어](https://github.com/Syrup2525/Development-Environment/blob/main/macOS/brew.md)
 * [kafka 설치 (brew 사용)](https://github.com/Syrup2525/Development-Environment/blob/main/macOS/kafka.md)
-
 
 # Xcode & Swift
 * [Pod 재설치](https://github.com/Syrup2525/Development-Environment/blob/main/XcodeAndSwift/pod-reinstall.md)
